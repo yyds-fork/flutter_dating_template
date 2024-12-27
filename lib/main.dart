@@ -54,9 +54,9 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         primaryColor: WcaoTheme.primary,
-        backgroundColor: Colors.transparent,
+        // backgroundColor: Colors.transparent,
         textTheme: TextTheme(
-          bodyText1: TextStyle(fontSize: WcaoTheme.fsBase),
+          bodyLarge: TextStyle(fontSize: WcaoTheme.fsBase),
         ),
         splashColor: Colors.transparent,
         highlightColor: Colors.transparent,

@@ -4,7 +4,6 @@ import 'package:flutter_dating_template/pages/home/message/firends_dialog.dart';
 import 'package:flutter_dating_template/pages/home/message/qr_scan.dart';
 import 'package:flutter_dating_template/wcao/ui/theme.dart';
 import 'package:get/get.dart';
-import 'package:scan/scan.dart';
 
 class PageViewMessage extends StatefulWidget {
   const PageViewMessage({Key? key}) : super(key: key);
@@ -15,7 +14,6 @@ class PageViewMessage extends StatefulWidget {
 
 class _PageViewMessageState extends State<PageViewMessage> {
   List<MockLike> lists = [];
-  ScanController controller = ScanController();
 
   @override
   void initState() {
@@ -55,8 +53,7 @@ class _PageViewMessageState extends State<PageViewMessage> {
                       showDialog(
                         context: context,
                         barrierDismissible: true,
-                        builder: (BuildContext context) =>
-                            const FirendsDialog(),
+                        builder: (BuildContext context) => const FirendsDialog(),
                       );
                     }
                   },
@@ -155,9 +152,7 @@ class _PageViewMessageState extends State<PageViewMessage> {
                       ),
                       Text(
                         item.time.split('T')[0],
-                        style: TextStyle(
-                            fontSize: WcaoTheme.fsSm,
-                            color: WcaoTheme.secondary),
+                        style: TextStyle(fontSize: WcaoTheme.fsSm, color: WcaoTheme.secondary),
                       )
                     ],
                   ),
